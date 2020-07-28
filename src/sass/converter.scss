@@ -18,6 +18,8 @@
     padding: 20px;
     height: 20vh;
     overflow-x: scroll;
+    box-shadow: 1px 1px 7px inset #aaa;
+    border-radius: 10px;
     
     .html-text{
       overflow-x: scroll;
@@ -34,10 +36,11 @@
     width: 100%;
     text-align: center;
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 100px;
     border: solid thin $dark-blue;
     padding: 20px;
     font-size: 20pt;
+    box-shadow: 1px 1px 10px #aaa;
     
     p {
       display: inherit;
@@ -54,13 +57,13 @@
       justify-content: center;
     }
   }
+
   
   .convert-button:hover {
     background-color: $dark-blue;
     cursor: pointer;
     color: white;
-    // box-shadow:
-
+    
     .icon {
       color: white;
       stroke: white;
@@ -71,6 +74,7 @@
     background-color: $disabled-grey !important;
     border-color: $disabled-grey !important;
     color: #ddd !important;
+    box-shadow: none !important;
 
     .icon {
       color: #ddd;
@@ -100,13 +104,13 @@
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 1px 1px 10px inset black;
     
     #jsx-text {
       color: lightblue;
       overflow-x: scroll;
       height: 30vh;
       width: 100%;
-      // background-color: $background;
       resize: none;
       background-color: unset;
       text-decoration: none;
@@ -116,15 +120,19 @@
   }
 
   .copy-alert {
-    display: absolute;
+    position: absolute;
     bottom: 50px;
     z-index: 100;
     background-color: $ok-green;
     color: $deep-green;
-    transition: 0.3s;
+    padding: 9px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #aaa;
+    transition: 0.2s;
   }
-
+  
   .alert-hidden {
+    bottom: 0px;
     opacity: 0;
   }
 }

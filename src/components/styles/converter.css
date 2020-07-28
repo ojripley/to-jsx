@@ -15,6 +15,8 @@
   padding: 20px;
   height: 20vh;
   overflow-x: scroll;
+  box-shadow: 1px 1px 7px inset #aaa;
+  border-radius: 10px;
 }
 .converter .html-box .html-text {
   overflow-x: scroll;
@@ -29,10 +31,11 @@
   width: 100%;
   text-align: center;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 100px;
   border: solid thin #05A;
   padding: 20px;
   font-size: 20pt;
+  box-shadow: 1px 1px 10px #aaa;
 }
 .converter .convert-button p {
   display: inherit;
@@ -60,6 +63,7 @@
   background-color: #aaa !important;
   border-color: #aaa !important;
   color: #ddd !important;
+  box-shadow: none !important;
 }
 .converter .convert-button-disabled .icon {
   color: #ddd;
@@ -78,10 +82,11 @@
   width: 100%;
   height: auto;
   border: solid thin #05A;
-  background-color: #030C12;
+  background-color: #53575f;
   padding: 20px;
   border-radius: 10px;
   margin: 20px;
+  box-shadow: 1px 1px 10px inset black;
 }
 .converter .output-container #jsx-text {
   color: lightblue;
@@ -95,14 +100,18 @@
   outline: none;
 }
 .converter .copy-alert {
-  display: absolute;
+  position: absolute;
   bottom: 50px;
   z-index: 100;
   background-color: #5DF6A7;
   color: #087A40;
-  transition: 0.3s;
+  padding: 9px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #aaa;
+  transition: 0.2s;
 }
 .converter .alert-hidden {
+  bottom: 0px;
   opacity: 0;
 }
 

@@ -6,9 +6,24 @@
   align-items: center;
   height: 100vh;
 }
+.app .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #05A;
+  color: white;
+  text-align: center;
+  text-justify: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .header .header-text {
+  font-size: 24pt;
+}
 
 body {
-  background-color: #eee;
   padding: 0px;
   margin: 0px;
   font-family: "Ubuntu Mono";
