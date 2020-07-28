@@ -2,12 +2,11 @@
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
 }
 .app .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #05A;
@@ -16,11 +15,18 @@
   text-justify: center;
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .app .header .header-text {
   font-size: 24pt;
+}
+.app .header .header-author {
+  color: lightblue;
+}
+.app .header .header-author .author-link {
+  color: lightblue;
+  outline: none;
 }
 
 body {

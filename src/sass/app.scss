@@ -4,12 +4,12 @@
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   height: 100vh;
 
   .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: $dark-blue;
@@ -18,11 +18,21 @@
     text-justify: center;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     .header-text {
       font-size: 24pt;
+    }
+
+
+    .header-author {
+      color: lightblue;
+
+      .author-link {
+        color: lightblue;
+        outline: none;
+      }
     }
   }
 }

@@ -82,9 +82,12 @@ export default function Converter() {
         <p>Convert HTML <span><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-right" width="32" height="32" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg></span> JSX</p>
       }</div>
 
-      <div className='output-container'>
-        <textarea id='jsx-text' value={jsx} readOnly></textarea>
-      </div>
+      {jsx ? 
+        <div className='output-container'>
+          <textarea id='jsx-text' value={jsx} readOnly></textarea>
+        </div> :
+        null
+      }
       {alertVisisble ? 
         <div className='copy-alert'>JSX copied to clipboard!</div> :
         <div className='copy-alert alert-hidden'>JSX copied to clipboard!</div>
