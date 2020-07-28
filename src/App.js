@@ -1,11 +1,13 @@
 import React from 'react';
 
-import PasteBox from './components/PasteBox';
+import Converter from './components/Converter';
+
+import './components/styles/app.css';
 
 function App() {
   return (
     <div className='app'>
-      <PasteBox></PasteBox>
+      <Converter></Converter>
     </div>
   );
 }
