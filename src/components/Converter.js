@@ -7,7 +7,7 @@ export default function Converter() {
   const [html, setHTML] = useState('');
   const [jsx, setJSX] = useState('');
   const [isConverting, setIsConverting] = useState(false);
-  const htmlEditor = useRef(null);
+  // const htmlEditor = useRef(null);
 
   const handleHTML = function(event) {
 
@@ -109,7 +109,7 @@ export default function Converter() {
       </Editor> */}
       <textarea className='html-box' onChange={(element) => handleHTML(element)} placeholder='Paste your HTML!'></textarea>
       <div className={html && isConverting ? 'convert-button convert-button-working' : html && !isConverting ? 'convert-button' : !html ? 'convert-button convert-button-disabled' : 'convert-button'} onClick={() => handleConvert(html)}>{isConverting ? 'Converting...' : 
-        <p>HTML <span><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-right" width="32" height="32" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg></span> JSX</p>
+        <p>Convert HTML <span><svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-arrow-narrow-right" width="32" height="32" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#000" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg></span> JSX</p>
       }</div>
 
       <div className='output-container'>

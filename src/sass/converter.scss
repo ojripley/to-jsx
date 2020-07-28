@@ -14,8 +14,8 @@
     resize: none;
     outline: none;
     border: solid thin $dark-blue;
-    margin: 1em;
-    padding: 1em;
+    margin: 20px;
+    padding: 20px;
     height: 20vh;
     overflow-x: scroll;
     
@@ -33,15 +33,18 @@
     justify-content: center;
     width: 100%;
     text-align: center;
-    margin: 1em;
-    border-radius: 15px;
+    margin: 20px;
+    border-radius: 20px;
     border: solid thin $dark-blue;
+    padding: 20px;
+    font-size: 20pt;
     
     p {
-      padding: 1em;
       display: inherit;
       justify-content: center;
       align-items: center;
+      margin: 0px;
+      padding: 0px;
     }
     
     span {
@@ -65,8 +68,14 @@
   }
 
   .convert-button-disabled {
-    background-color: $disabled-grey;
-    border-color: $disabled-grey;
+    background-color: $disabled-grey !important;
+    border-color: $disabled-grey !important;
+    color: #ddd !important;
+
+    .icon {
+      color: #ddd;
+      stroke: #ddd !important;
+    }
   }
 
   .convert-button-working {
@@ -84,17 +93,21 @@
 
   .output-container {
     width: 100%;
-    height: 30vh;
+    height: auto;
     // overflow-y: scroll;
     border: solid thin $dark-blue;
-    background-color: $dark-blue;
-    color: white;
-
+    background-color: $slate;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    
     #jsx-text {
+      color: lightblue;
       overflow-x: scroll;
-      height: 100%;
+      height: 30vh;
       width: 100%;
       // background-color: $background;
+      resize: none;
       background-color: unset;
       text-decoration: none;
       border: none;

@@ -11,8 +11,8 @@
   resize: none;
   outline: none;
   border: solid thin #05A;
-  margin: 1em;
-  padding: 1em;
+  margin: 20px;
+  padding: 20px;
   height: 20vh;
   overflow-x: scroll;
 }
@@ -28,15 +28,18 @@
   justify-content: center;
   width: 100%;
   text-align: center;
-  margin: 1em;
-  border-radius: 15px;
+  margin: 20px;
+  border-radius: 20px;
   border: solid thin #05A;
+  padding: 20px;
+  font-size: 20pt;
 }
 .converter .convert-button p {
-  padding: 1em;
   display: inherit;
   justify-content: center;
   align-items: center;
+  margin: 0px;
+  padding: 0px;
 }
 .converter .convert-button span {
   display: flex;
@@ -54,8 +57,13 @@
   stroke: white;
 }
 .converter .convert-button-disabled {
-  background-color: #aaa;
-  border-color: #aaa;
+  background-color: #aaa !important;
+  border-color: #aaa !important;
+  color: #ddd !important;
+}
+.converter .convert-button-disabled .icon {
+  color: #ddd;
+  stroke: #ddd !important;
 }
 .converter .convert-button-working {
   -webkit-animation: BOX-SHADOW-PULSE 1s infinite;
@@ -68,15 +76,19 @@
 }
 .converter .output-container {
   width: 100%;
-  height: 30vh;
+  height: auto;
   border: solid thin #05A;
-  background-color: #05A;
-  color: white;
+  background-color: #030C12;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
 }
 .converter .output-container #jsx-text {
+  color: lightblue;
   overflow-x: scroll;
-  height: 100%;
+  height: 30vh;
   width: 100%;
+  resize: none;
   background-color: unset;
   text-decoration: none;
   border: none;
