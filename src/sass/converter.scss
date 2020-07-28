@@ -114,6 +114,19 @@
       outline: none;
     }
   }
+
+  .copy-alert {
+    display: absolute;
+    bottom: 50px;
+    z-index: 100;
+    background-color: $ok-green;
+    color: $deep-green;
+    transition: 0.3s;
+  }
+
+  .alert-hidden {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes BOX-SHADOW-PULSE {

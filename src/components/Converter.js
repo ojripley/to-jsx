@@ -8,6 +8,7 @@ export default function Converter() {
   const [jsx, setJSX] = useState('');
   const [isConverting, setIsConverting] = useState(false);
   // const htmlEditor = useRef(null);
+  const [alertVisisble, setAlertVisible] = useState(false);
 
   const handleHTML = function(event) {
 
@@ -62,7 +63,7 @@ export default function Converter() {
         setIsConverting(false);
   
         copyJSXToClipBoard();
-      }, 100);
+      }, 0);
     }
   }
 
@@ -76,8 +77,14 @@ export default function Converter() {
 
     document.execCommand('copy');
 
-    alert('copied!');
-  }
+    // alert('copied!');
+
+    setAlertVisible(true);
+
+    setTimeout(() => {
+      setAlertVisible(false);
+    }, 3000);
+  };
 
   return (
     <div className='converter'>
@@ -115,6 +122,10 @@ export default function Converter() {
       <div className='output-container'>
         <textarea id='jsx-text' value={jsx} readOnly></textarea>
       </div>
+      {alertVisisble ? 
+        <div className='copy-alert'>JSX copied to clipboard!</div> :
+        <div className='copy-alert alert-hidden'>JSX copied to clipboard!</div>
+      }
     </div>
   );
 };

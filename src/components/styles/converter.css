@@ -94,6 +94,17 @@
   border: none;
   outline: none;
 }
+.converter .copy-alert {
+  display: absolute;
+  bottom: 50px;
+  z-index: 100;
+  background-color: #5DF6A7;
+  color: #087A40;
+  transition: 0.3s;
+}
+.converter .alert-hidden {
+  opacity: 0;
+}
 
 @-webkit-keyframes BOX-SHADOW-PULSE {
   0% {
