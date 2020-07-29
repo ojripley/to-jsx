@@ -10,7 +10,7 @@ function App() {
       <div className='header'>
         <p className='header-text'>to-JSX</p>
 
-        <p className='header-author'>Created By: <span><a className='author-link' href='https://github.com/ojripley' target='_blank' rel='noopener noreferrer'>Owen Ripley</a></span></p>
+        <p className='header-author'>Created By: <span><a className='author-link' href='https://ojripley.com/' target='_blank' rel='noopener noreferrer'>Owen Ripley</a></span></p>
       </div>
       <Converter></Converter>
     </div>
