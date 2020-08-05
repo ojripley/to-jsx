@@ -66,6 +66,9 @@ export default function Converter() {
 
     document.execCommand('copy');
 
+    // jsxElement.deselect();
+    // window.getSelection().removeAllRanges();
+
     // alert('copied!');
 
     setAlertVisible(true);

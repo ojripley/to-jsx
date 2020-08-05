@@ -35,6 +35,11 @@
       }
     }
   }
+
+  .page-container {
+    width: 80%;
+    // margin-left: 15%;
+  }
 }
 
 body {
@@ -53,4 +58,10 @@ textarea {
 input {
   font-family: 'Ubuntu Mono';
   font-size: 14pt;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-container {
+    width: 70% !important;
+  }
 }

@@ -1,0 +1,10 @@
+.control-bar {
+  margin-top: 10em;
+  padding: 20px;
+  background-color: slategrey;
+}
+.control-bar .control-item {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=controlBar.css.map */

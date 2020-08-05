@@ -28,6 +28,9 @@
   color: lightblue;
   outline: none;
 }
+.app .page-container {
+  width: 80%;
+}
 
 body {
   padding: 0px;
@@ -44,6 +47,12 @@ textarea {
 input {
   font-family: "Ubuntu Mono";
   font-size: 14pt;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-container {
+    width: 70% !important;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
