@@ -1,142 +1,130 @@
 @import './variables.scss';
 
-.converter {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  // margin-left: 2.5%;
-  // justify-content: center;
-  align-items: center;
-  margin-top: 90px;
-
-  .html-box {
-    width: 100%;
-    text-decoration: none;
-    resize: none;
-    outline: none;
-    border: solid thin $dark-blue;
-    margin: 20px;
-    padding: 20px;
-    height: 20vh;
+.html-box {
+  width: 100%;
+  text-decoration: none;
+  resize: none;
+  outline: none;
+  border: solid thin $dark-blue;
+  margin-bottom: 4vh;
+  padding: 10px;
+  height: 32vh;
+  overflow-x: scroll;
+  box-shadow: 1px 1px 7px inset #aaa;
+  border-radius: 10px;
+  
+  .html-text{
     overflow-x: scroll;
-    box-shadow: 1px 1px 7px inset #aaa;
-    border-radius: 10px;
-    
-    .html-text{
-      overflow-x: scroll;
-      font-family: 'Ubuntu Mono';
-      color: red;
-    }
+    font-family: 'Ubuntu Mono';
+    color: red;
   }
+}
 
-  .convert-button {
+.convert-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4vh;
+  border-radius: 100px;
+  border: solid thin $dark-blue;
+  padding: 10px;
+  font-size: 20pt;
+  box-shadow: 1px 1px 10px #aaa;
+  
+  p {
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  span {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    text-align: center;
-    margin: 20px;
-    border-radius: 100px;
-    border: solid thin $dark-blue;
-    padding: 20px;
-    font-size: 20pt;
-    box-shadow: 1px 1px 10px #aaa;
-    
-    p {
-      display: inherit;
-      justify-content: center;
-      align-items: center;
-      margin: 0px;
-      padding: 0px;
-    }
-    
-    span {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
   }
+}
 
+
+.convert-button:hover {
+  background-color: $dark-blue;
+  cursor: pointer;
+  color: white;
   
-  .convert-button:hover {
-    background-color: $dark-blue;
-    cursor: pointer;
+  .icon {
     color: white;
-    
-    .icon {
-      color: white;
-      stroke: white;
-    }
+    stroke: white;
   }
+}
 
-  .convert-button-disabled {
-    background-color: $disabled-grey !important;
-    border-color: $disabled-grey !important;
-    color: #ddd !important;
-    box-shadow: none !important;
+.convert-button-disabled {
+  background-color: $disabled-grey !important;
+  border-color: $disabled-grey !important;
+  color: #ddd !important;
+  box-shadow: none !important;
 
-    .icon {
-      color: #ddd;
-      stroke: #ddd !important;
-    }
+  .icon {
+    color: #ddd;
+    stroke: #ddd !important;
   }
+}
 
-  .convert-button-working {
-    // box-shadow: 4px 4px black;
+.convert-button-working {
+  // box-shadow: 4px 4px black;
 
-    -webkit-animation: BOX-SHADOW-PULSE 1s infinite; /* Safari 4+ */
-    -moz-animation:    BOX-SHADOW-PULSE 1s infinite; /* Fx 5+ */
-    -o-animation:      BOX-SHADOW-PULSE 1s infinite; /* Opera 12+ */
-    animation:         BOX-SHADOW-PULSE 1s infinite;
-  }
+  -webkit-animation: BOX-SHADOW-PULSE 1s infinite; /* Safari 4+ */
+  -moz-animation:    BOX-SHADOW-PULSE 1s infinite; /* Fx 5+ */
+  -o-animation:      BOX-SHADOW-PULSE 1s infinite; /* Opera 12+ */
+  animation:         BOX-SHADOW-PULSE 1s infinite;
+}
 
-  #jsx-text {
-
-  }
-
-  .output-container {
-    width: 100%;
-    height: auto;
-    // overflow-y: scroll;
-    border: solid thin $dark-blue;
-    background-color: $slate;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 1px 1px 10px inset black;
-    
-    #jsx-text {
-      color: lightblue;
-      overflow-x: scroll;
-      height: 30vh;
-      width: 100%;
-      resize: none;
-      background-color: unset;
-      text-decoration: none;
-      border: none;
-      outline: none;
-    }
-  }
-
-  .copy-alert {
-    position: absolute;
-    bottom: 50px;
-    z-index: 100;
-    background-color: $ok-green;
-    color: $deep-green;
-    padding: 9px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px #aaa;
-    transition: 0.2s;
-    font-size: 16pt;
-  }
+.output-container {
+  width: 100%;
+  height: auto;
+  // overflow-y: scroll;
+  border: solid thin $dark-blue;
+  background-color: $slate;
+  padding: 10px;
+  border-radius: 10px;
+  // margin: 20px;
+  margin-bottom: 60px;
+  box-shadow: 1px 1px 10px inset black;
   
-  .alert-hidden {
-    bottom: 0px;
-    opacity: 0;
+  #jsx-text {
+    color: lightblue;
+    overflow-x: scroll;
+    height: 32vh;
+    // height: auto;
+    width: 100%;
+    resize: none;
+    background-color: unset;
+    text-decoration: none;
+    border: none;
+    outline: none;
   }
+}
+
+.copy-alert {
+  position: fixed;
+  bottom: 1.5vh;
+  z-index: 100;
+  background-color: $ok-green;
+  color: $deep-green;
+  padding: 9px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #aaa;
+  transition: 0.2s;
+  font-size: 16pt;
+}
+
+.alert-hidden {
+  bottom: 0px;
+  opacity: 0;
 }
 
 @-webkit-keyframes BOX-SHADOW-PULSE {
@@ -161,9 +149,11 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .converter {
-    width: 70%;
-    // margin-left: 15%;
-    // background-color: red;
-  }
+  // .html-box {
+  //   height: 30vh;
+  // }
+
+  // .output-container {
+  //   height: 30vh;
+  // }
 }

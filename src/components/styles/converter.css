@@ -1,75 +1,72 @@
-.converter {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  align-items: center;
-  margin-top: 90px;
-}
-.converter .html-box {
+.html-box {
   width: 100%;
   text-decoration: none;
   resize: none;
   outline: none;
   border: solid thin #05A;
-  margin: 20px;
-  padding: 20px;
-  height: 20vh;
+  margin-bottom: 4vh;
+  padding: 10px;
+  height: 32vh;
   overflow-x: scroll;
   box-shadow: 1px 1px 7px inset #aaa;
   border-radius: 10px;
 }
-.converter .html-box .html-text {
+.html-box .html-text {
   overflow-x: scroll;
   font-family: "Ubuntu Mono";
   color: red;
 }
-.converter .convert-button {
+
+.convert-button {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
   text-align: center;
-  margin: 20px;
+  margin-bottom: 4vh;
   border-radius: 100px;
   border: solid thin #05A;
-  padding: 20px;
+  padding: 10px;
   font-size: 20pt;
   box-shadow: 1px 1px 10px #aaa;
 }
-.converter .convert-button p {
+.convert-button p {
   display: inherit;
   justify-content: center;
   align-items: center;
   margin: 0px;
   padding: 0px;
 }
-.converter .convert-button span {
+.convert-button span {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.converter .convert-button:hover {
+
+.convert-button:hover {
   background-color: #05A;
   cursor: pointer;
   color: white;
 }
-.converter .convert-button:hover .icon {
+.convert-button:hover .icon {
   color: white;
   stroke: white;
 }
-.converter .convert-button-disabled {
+
+.convert-button-disabled {
   background-color: #aaa !important;
   border-color: #aaa !important;
   color: #ddd !important;
   box-shadow: none !important;
 }
-.converter .convert-button-disabled .icon {
+.convert-button-disabled .icon {
   color: #ddd;
   stroke: #ddd !important;
 }
-.converter .convert-button-working {
+
+.convert-button-working {
   -webkit-animation: BOX-SHADOW-PULSE 1s infinite;
   /* Safari 4+ */
   -moz-animation: BOX-SHADOW-PULSE 1s infinite;
@@ -78,20 +75,21 @@
   /* Opera 12+ */
   animation: BOX-SHADOW-PULSE 1s infinite;
 }
-.converter .output-container {
+
+.output-container {
   width: 100%;
   height: auto;
   border: solid thin #05A;
-  background-color: #53575f;
-  padding: 20px;
+  background-color: #42469a;
+  padding: 10px;
   border-radius: 10px;
-  margin: 20px;
+  margin-bottom: 60px;
   box-shadow: 1px 1px 10px inset black;
 }
-.converter .output-container #jsx-text {
+.output-container #jsx-text {
   color: lightblue;
   overflow-x: scroll;
-  height: 30vh;
+  height: 32vh;
   width: 100%;
   resize: none;
   background-color: unset;
@@ -99,9 +97,10 @@
   border: none;
   outline: none;
 }
-.converter .copy-alert {
-  position: absolute;
-  bottom: 50px;
+
+.copy-alert {
+  position: fixed;
+  bottom: 1.5vh;
   z-index: 100;
   background-color: #5DF6A7;
   color: #087A40;
@@ -111,7 +110,8 @@
   transition: 0.2s;
   font-size: 16pt;
 }
-.converter .alert-hidden {
+
+.alert-hidden {
   bottom: 0px;
   opacity: 0;
 }
@@ -158,11 +158,6 @@
   }
   100% {
     box-shadow: 0px 0px 2px 2px white;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .converter {
-    width: 70%;
   }
 }
 
