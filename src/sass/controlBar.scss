@@ -1,14 +1,41 @@
+@import './variables.scss';
+
 .control-bar {
-  
+  position: absolute;
+  display: flex;
   // align-self: flex-end;
   // width: 80vw;
+  margin-bottom: 20px;
   // margin: 20px;
-  margin-top: 10em;
+  margin-top: 5em;
   // margin-right: 15%;
   padding: 20px;
-  background-color: slategrey;
+  // background-color: $disabled-grey;
+  background: linear-gradient(45deg, $purple, $light-blue);
+  border-radius: 50px;
+  width: 1%;
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-between;
+  border: solid thin $dark-blue;
+  transition: 0.25s;
+  align-self: flex-end;
+  margin-right: -20px;
 
   .control-item {
-    padding: 20px;
+    // padding: 20px;
+    border-radius: 50px;
+    // background-color: $dark-blue;
+    background-color: $purple;
+    border: solid white;
+    padding: 10px;
+    width: fit-content;
+    margin: 0px;
+    color: white;
   }
+}
+
+.control-bar:hover {
+  width: 100%;
 }
