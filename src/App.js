@@ -17,7 +17,7 @@ function App() {
       </div>
 
       <div className='page-container'>
-        <ControlBar></ControlBar>
+        {/* <ControlBar></ControlBar> */}
         <Converter></Converter>
       </div>
 
