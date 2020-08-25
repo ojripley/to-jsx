@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ToJSX",
+  "name": "ToJSX - A free HTML to JSX converter",
   "icons": [
     {
       "src": "favicon.ico",
