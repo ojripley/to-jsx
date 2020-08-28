@@ -13,6 +13,9 @@ export default function Converter() {
   };
 
   const handleConvert = function(html) {
+
+    // todo: refactor to handle style={{}} attributes
+
     if (html) {
 
       setIsConverting(true);
