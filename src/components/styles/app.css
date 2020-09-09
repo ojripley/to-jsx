@@ -10,20 +10,21 @@
   scroll-behavior: smooth;
 }
 .app .header {
+  display: flex;
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(45deg, #65A, #08F);
-  color: white;
-  text-align: center;
-  text-justify: center;
+  background: linear-gradient(45deg, #65a, #08f);
+  color: #fff;
   height: 6vh;
-  display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .app .header .header-text {
   font-size: 24pt;
+  align-self: center;
 }
 .app .header .header-author {
   color: lightblue;
